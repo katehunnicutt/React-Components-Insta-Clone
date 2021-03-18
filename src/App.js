@@ -8,14 +8,16 @@
 import React, {useState} from 'react';
 
 // Import the Posts (plural!) and SearchBar components, since they are used inside App component
-// Import the dummyData
 import Posts from './components/Posts/Posts'
-//import LikeSection from './components/Posts/LikeSection'
-import dummyData from './dummy-data';
 import SearchBar from './components/SearchBar/SearchBar';
+
+// Import the dummyData
+import dummyData from './dummy-data';
+
+//import LikeSection 
+import LikeSection from './components/Posts/LikeSection'
 import './App.css';
 
-//import DummyData from './dummy-data'
 
 
 const App = () => {
@@ -50,7 +52,7 @@ const [posts, setPosts] = useState(dummyData);
     <div className='App'>
       {/* Add SearchBar and Posts here to render them */}
       <SearchBar/>
-      <Posts postProp = {posts} likePost = {likePost} />
+      <Posts posts={posts} likePost={likePost} />
       {/* Check the implementation of each component, to see what props they require, if any! */}
     </div>
   );
